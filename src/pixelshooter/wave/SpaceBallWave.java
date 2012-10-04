@@ -1,11 +1,11 @@
 package pixelshooter.wave;
 
 import pixelshooter.LevelReader;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 
 public class SpaceBallWave extends Wave {
 	
-	public SpaceBallWave(Shooter game, LevelReader r, int maxAmount) {
+	public SpaceBallWave(AndroidGame game, LevelReader r, int maxAmount) {
 		super(game, r, maxAmount);
 		this.setFreq(300);
 		this.setShipClass("SpaceBall");

@@ -1,12 +1,12 @@
 package pixelshooter.wave;
 
 import pixelshooter.LevelReader;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.ship.Ship;
 
 public class SparkEyeWave extends Wave {
 	
-	public SparkEyeWave(Shooter game, LevelReader r, int maxAmount) {
+	public SparkEyeWave(AndroidGame game, LevelReader r, int maxAmount) {
 		super(game, r, maxAmount*8); // it spawns 8 enemies per spawn
 		this.setFreq(200); 
 		this.setShipClass("SparkEye");

@@ -1,11 +1,11 @@
 package pixelshooter.wave;
 
 import pixelshooter.LevelReader;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 
 public class SparkWave extends Wave {
 	
-	public SparkWave(Shooter game, LevelReader r, int maxAmount) {
+	public SparkWave(AndroidGame game, LevelReader r, int maxAmount) {
 		super(game, r, maxAmount);
 		this.setFreq(100);
 		this.setShipClass("SparkDefender");

@@ -3,7 +3,7 @@ package pixelshooter.wave;
 import java.lang.reflect.Constructor;
 
 import pixelshooter.LevelReader;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.ship.*;
 
 public abstract class Wave {
@@ -14,9 +14,9 @@ public abstract class Wave {
 	private LevelReader reader;
 	public boolean stopped;
 	private String shipClass;
-	protected Shooter game;
+	protected AndroidGame game;
 	
-	public Wave(Shooter game, LevelReader reader, int maxAmount) {
+	public Wave(AndroidGame game, LevelReader reader, int maxAmount) {
 		this.setFreq(20);
 		this.game = game;
 		this.reader = reader;
@@ -50,7 +50,7 @@ public abstract class Wave {
 			Class<Ship> ship = (Class<Ship>) Class.forName("pixelshooter.ship.enemy."+shipClass);
 			
 			Constructor<Ship> c = ship.getConstructor(double.class, double.class,
-					double.class, double.class, Shooter.class);
+					double.class, double.class, AndroidGame.class);
 			
 			s = c.newInstance(x+game.viewXOfs(), y+game.viewYOfs(), vel, angle, this.game);
 			this.setSpawned(this.getSpawned()+1);

@@ -1,11 +1,11 @@
 package pixelshooter.ship.enemy;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.cannon.*;
 import pixelshooter.ship.EnemyShip;
 
 public class CibumDestroyer extends EnemyShip {
 
-	public CibumDestroyer(double x, double y, double vel, double angle, Shooter game) {
+	public CibumDestroyer(double x, double y, double vel, double angle, AndroidGame game) {
 		super(x, y, "cibumdestroyer", 50, game);
 
 		this.velocity = vel;

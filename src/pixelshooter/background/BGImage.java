@@ -1,17 +1,17 @@
 package pixelshooter.background;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import jgame.JGImage;
 
 public class BGImage{
 	
-	private Shooter game;
+	private AndroidGame game;
 	private BGUnit[] sprites;
 	private double width;
 	private double height;
 	private String graphic;
 	private double scroll;
 	
-	public BGImage(String graphic, double scroll, Shooter game){
+	public BGImage(String graphic, double scroll, AndroidGame game){
 		this.game = game;
 		
 		JGImage img = game.getImage(graphic);

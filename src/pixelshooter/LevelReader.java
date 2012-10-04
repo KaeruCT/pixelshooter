@@ -14,10 +14,10 @@ public class LevelReader {
 	private String[] waveClasses;
 	private int[] maxAmounts;
 	private String currentLine;
-	private Shooter game;
+	private AndroidGame game;
 	private int wavesDone;
 	
-	public LevelReader(Shooter game, String file) throws UnsupportedEncodingException{
+	public LevelReader(AndroidGame game, String file) throws UnsupportedEncodingException{
 		
 		this.reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(file), "UTF-8"));
 		this.currentLine = null;
@@ -66,7 +66,7 @@ public class LevelReader {
 		for(int i = 0; i < classNames.length; i++){
 			try {
 				Class<Wave> wave = (Class<Wave>) Class.forName("pixelshooter.wave."+classNames[i]);
-				Constructor<Wave> c = wave.getConstructor(Shooter.class, LevelReader.class, int.class);
+				Constructor<Wave> c = wave.getConstructor(AndroidGame.class, LevelReader.class, int.class);
 				
 				Wave w = c.newInstance(this.game, this, maxAmounts[i]);
 				this.game.waves.add(w);

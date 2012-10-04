@@ -1,7 +1,7 @@
 package pixelshooter.ship;
 import java.awt.event.KeyEvent;
 
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.cannon.*;
 
 import jgame.platform.JGEngine;
@@ -11,7 +11,7 @@ public abstract class PlayerShip extends Ship {
 	public Cannon[] cannonPrototypes;
 	protected double acc;
 	
-	public PlayerShip(int x, int y, String anim, int health, Shooter game) {
+	public PlayerShip(int x, int y, String anim, int health, AndroidGame game) {
 		super(x, y, "player", game.PLAYER_ID, anim, health, game);
 		this.velocity = 2;
 		this.acc = 0.1;

@@ -6,11 +6,11 @@ import jgame.JGColor;
 
 public class ShooterTitle {
 	
-	private Shooter game;
+	private AndroidGame game;
 	public int selectedShip;
 	private String[] shipNames;
 	
-	public ShooterTitle(Shooter game){
+	public ShooterTitle(AndroidGame game){
 		this.game = game;
 		this.selectedShip = 0;
 		

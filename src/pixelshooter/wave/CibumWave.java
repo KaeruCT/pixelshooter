@@ -1,11 +1,11 @@
 package pixelshooter.wave;
 
 import pixelshooter.LevelReader;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 
 public class CibumWave extends Wave {
 	
-	public CibumWave(Shooter game, LevelReader r, int maxAmount) {
+	public CibumWave(AndroidGame game, LevelReader r, int maxAmount) {
 		super(game, r, maxAmount);
 		this.setFreq(200);
 		this.setShipClass("CibumDestroyer");

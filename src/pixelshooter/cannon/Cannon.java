@@ -1,11 +1,11 @@
 package pixelshooter.cannon;
 
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 
 public abstract class Cannon {
 
 	public int waitTime;
-	public static Shooter game;
+	public static AndroidGame game;
 	public int lastShoot;
 	
 	public Cannon(){

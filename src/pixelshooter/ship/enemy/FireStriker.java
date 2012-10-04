@@ -1,12 +1,12 @@
 package pixelshooter.ship.enemy;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.cannon.*;
 import pixelshooter.ship.EnemyShip;
 import pixelshooter.ship.PlayerShip;
 
 public class FireStriker extends EnemyShip {
 
-	public FireStriker(double x, double y, double vel, double angle, Shooter game) {
+	public FireStriker(double x, double y, double vel, double angle, AndroidGame game) {
 		super(x, y, "firestriker", 5, game);
 
 		this.velocity = vel;

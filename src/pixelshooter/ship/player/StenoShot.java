@@ -1,12 +1,12 @@
 package pixelshooter.ship.player;
 
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.cannon.*;
 import pixelshooter.ship.PlayerShip;
 
 public class StenoShot extends PlayerShip {
 	
-	public StenoShot(int x, int y, Shooter game) {
+	public StenoShot(int x, int y, AndroidGame game) {
 		super(x, y, "player1", 70, game);
 		this.velocity = 3.2;
 		this.acc = 0.3;

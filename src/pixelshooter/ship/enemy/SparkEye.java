@@ -1,11 +1,11 @@
 package pixelshooter.ship.enemy;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.cannon.*;
 import pixelshooter.ship.EnemyShip;
 
 public class SparkEye extends EnemyShip {
 
-	public SparkEye(double x, double y, double vel, double angle, Shooter game) {
+	public SparkEye(double x, double y, double vel, double angle, AndroidGame game) {
 		super(x, y, "sparkeye", 20, game);
 
 		this.velocity = vel;

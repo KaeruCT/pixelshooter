@@ -1,10 +1,10 @@
 package pixelshooter.ship;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 
 
 public abstract class EnemyShip extends Ship {
 
-	public EnemyShip(double x, double y, String anim, double maxHealth, Shooter game) {
+	public EnemyShip(double x, double y, String anim, double maxHealth, AndroidGame game) {
 		super(x, y, "enemy", game.ENEMY_ID, anim, maxHealth, game);
 
 		this.velocity = 1;

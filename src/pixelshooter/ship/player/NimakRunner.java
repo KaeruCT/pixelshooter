@@ -1,12 +1,12 @@
 package pixelshooter.ship.player;
 
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.cannon.*;
 import pixelshooter.ship.PlayerShip;
 
 public class NimakRunner extends PlayerShip {
 	
-	public NimakRunner(int x, int y, Shooter game) {
+	public NimakRunner(int x, int y, AndroidGame game) {
 		super(x, y, "player2", 80, game);
 		this.velocity = 2.2;
 		this.acc = 0.1;

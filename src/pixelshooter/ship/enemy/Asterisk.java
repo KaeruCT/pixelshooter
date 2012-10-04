@@ -1,5 +1,5 @@
 package pixelshooter.ship.enemy;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.ship.EnemyShip;
 
 public class Asterisk extends EnemyShip {
@@ -7,7 +7,7 @@ public class Asterisk extends EnemyShip {
 	private double offset;
 	private double radius;
 	
-	public Asterisk(double x, double y, double vel, double angle, Shooter game) {
+	public Asterisk(double x, double y, double vel, double angle, AndroidGame game) {
 		super(x, y, "asterisk", 5, game);
 
 		this.velocity = vel;

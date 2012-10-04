@@ -1,5 +1,5 @@
 package pixelshooter.ship.enemy;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.cannon.*;
 import pixelshooter.ship.EnemyShip;
 import pixelshooter.ship.PlayerShip;
@@ -10,7 +10,7 @@ public class SpaceBall extends EnemyShip {
 	private double offset;
 	private double radius;
 	
-	public SpaceBall(double x, double y, double vel, double angle, Shooter game) {
+	public SpaceBall(double x, double y, double vel, double angle, AndroidGame game) {
 		super(x, y, "spaceball", 5, game);
 
 		this.velocity = vel;

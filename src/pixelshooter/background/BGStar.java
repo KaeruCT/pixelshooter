@@ -1,13 +1,13 @@
 package pixelshooter.background;
 
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import jgame.JGObject;
 
 public class BGStar extends JGObject{
 	
-	private Shooter game;
+	private AndroidGame game;
 	
-	public BGStar(double x, double y, int n, Shooter game){
+	public BGStar(double x, double y, int n, AndroidGame game){
 		super("bgstar", true, x, y, 0x99, "bgstar_"+n, 0, n*2);
 		this.expiry = -2;
 		this.game = game;

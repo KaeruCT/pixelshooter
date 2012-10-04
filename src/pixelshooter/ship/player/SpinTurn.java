@@ -1,12 +1,12 @@
 package pixelshooter.ship.player;
 
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.cannon.*;
 import pixelshooter.ship.PlayerShip;
 
 public class SpinTurn extends PlayerShip {
 	
-	public SpinTurn(int x, int y, Shooter game) {
+	public SpinTurn(int x, int y, AndroidGame game) {
 		super(x, y, "player3", 100, game);
 		this.velocity = 2.6;
 		this.acc = 0.2;

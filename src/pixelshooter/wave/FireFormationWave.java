@@ -1,11 +1,11 @@
 package pixelshooter.wave;
 
 import pixelshooter.LevelReader;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 
 public class FireFormationWave extends Wave {
 	
-	public FireFormationWave(Shooter game, LevelReader r, int maxAmount) {
+	public FireFormationWave(AndroidGame game, LevelReader r, int maxAmount) {
 		super(game, r, maxAmount*3); // *3 because it spawns in triads
 		this.setFreq(50);
 		this.setShipClass("FireStriker");

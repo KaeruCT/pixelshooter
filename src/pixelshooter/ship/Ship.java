@@ -2,7 +2,7 @@ package pixelshooter.ship;
 import java.util.ArrayList;
 
 import pixelshooter.Explosion;
-import pixelshooter.Shooter;
+import pixelshooter.AndroidGame;
 import pixelshooter.bullet.Bullet;
 import pixelshooter.cannon.*;
 
@@ -11,7 +11,7 @@ import jgame.JGTimer;
 
 public abstract class Ship extends JGObject {
 	
-	protected Shooter game;
+	protected AndroidGame game;
 	protected double velocity;
 	public ArrayList<Cannon> cannons;
 	private static int flashingTime = 32;
@@ -26,7 +26,7 @@ public abstract class Ship extends JGObject {
 	protected Ship parent;
 	protected boolean sturdy; // don't get hurt at all if hit by ships
 	
-	public Ship(double x, double y, String name, int cid, String graphic, double maxHealth, Shooter game) {
+	public Ship(double x, double y, String name, int cid, String graphic, double maxHealth, AndroidGame game) {
 		super(name, true, x, y, cid, graphic);
 		this.game = game;
 		this.velocity = 1;
