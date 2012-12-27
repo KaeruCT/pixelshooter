@@ -29,7 +29,7 @@ public abstract class Ship extends JGObject {
 	public Ship(double x, double y, String name, int cid, String graphic, double maxHealth, AndroidGame game) {
 		super(name, true, x, y, cid, graphic);
 		this.game = game;
-		this.velocity = 1;
+		this.velocity = 1; // max speed
 		this.maxHealth = maxHealth;
 		this.angle = Math.PI*2;
 		this.expiry = -2;
@@ -109,8 +109,6 @@ public abstract class Ship extends JGObject {
 		final int offset = this.width/2-8; // 16/2 is explosion width
 		final int r = this.width/2;
 		
-
-		game.playAudio("explode");
 		new Explosion(x+offset, y+offset, explosionColor);
 		
 		for(int i = 0; i < this.width; i+=8){
@@ -120,6 +118,8 @@ public abstract class Ship extends JGObject {
 				new Explosion(x+offset, y+offset, explosionColor);
 			}};
 		}
+		
+		game.playAudio("explode");
 		
 		remove();
 	}

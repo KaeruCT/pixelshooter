@@ -82,7 +82,7 @@ public class ShooterTitle {
 		this.game.drawString("press SPACE to begin", centerX, centerY-16, 0);
 		this.game.drawString("move with WASD or ARROW keys", centerX, centerY-8, 0);
 		this.game.drawString("shoot with SPACE or Z", centerX, centerY, 0);
-		this.game.drawString("change mode with number keys", centerX, centerY+8, 0);
+		this.game.drawString("change mode with [1, 2, 3] keys", centerX, centerY+8, 0);
 		
 		this.game.drawString("SELECT YOUR SHIP:", centerX, centerY+24, 0);
 		this.game.drawString(shipNames[this.selectedShip], centerX, centerY+32, 0, "yellow");

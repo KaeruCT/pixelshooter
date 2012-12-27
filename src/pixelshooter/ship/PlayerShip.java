@@ -48,24 +48,28 @@ public abstract class PlayerShip extends Ship {
 			shoot();
 			
 			// bounce
-			if(yspeed < velocity)
-				this.yspeed += acc*0.1;
+			// bounce is annoying, never uncomment
+			//if(yspeed < velocity)
+			//	this.yspeed += acc*0.1;
 			
-			game.playAudio("sparkchn", "laser", false);
+			if (clock%5==0) {
+				game.playAudio("laser");
+			}
 		}
 		
 		// movement
 		if(getKey(JGEngine.KeyLeft) || getKey(KeyEvent.VK_A)){
 
 			if(xspeed > -velocity)
-			this.xspeed -= acc;
+				this.xspeed -= acc;
 			
 		}else if(getKey(JGEngine.KeyRight) || getKey(KeyEvent.VK_D)){
 
 			if(xspeed < velocity)
-			this.xspeed += acc;
+				this.xspeed += acc;
 			
 		}
+		
 		if(getKey(JGEngine.KeyUp) || getKey(KeyEvent.VK_W)){
 			
 			if(yspeed > -velocity)
@@ -75,7 +79,13 @@ public abstract class PlayerShip extends Ship {
 			
 			if(yspeed < velocity)
 				this.yspeed += acc;
-			
+		}
+		
+		if (yspeed != 0) {
+			yspeed += 0.1*(yspeed < 0 ? acc : -acc);
+		}
+		if (xspeed != 0) {
+			xspeed += 0.1*(xspeed < 0 ? acc : -acc);
 		}
 		
 		// correcting bounds (wrap horizontally)

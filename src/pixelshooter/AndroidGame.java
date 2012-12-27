@@ -1,5 +1,7 @@
 package pixelshooter;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import java.util.Vector;
 
 import pixelshooter.background.*;
 import pixelshooter.bullet.Bullet;
@@ -21,6 +23,7 @@ public class AndroidGame extends JGEngine {
 	public int starCount;
 	public int starMax = 128;
 	public int starFreq = 80;
+	private boolean levelFinished = false;
 	public final int WIDTH = 40/2;
 	public final int HEIGHT = 30/2;
 	public final int VWIDTH = 40/2;
@@ -156,6 +159,16 @@ public class AndroidGame extends JGEngine {
 		}
 
 		t++;
+		
+		if (getKey(KeyEvent.VK_R)) {
+			this.removeObjects("", 0);
+			this.setGameState("Title");
+		}
+		
+		if (this.waves.size() == 0) {
+			Vector enemies = this.getObjects(null, ENEMY_ID, false, null);
+			levelFinished = true;
+		}
 	}
 	
 	public void paintFrameInGame() {
@@ -164,6 +177,22 @@ public class AndroidGame extends JGEngine {
 		drawString("Mode:"+p.getMode(), 4, viewHeight()-10, -1);
 		drawString("Score:"+this.score, viewWidth()-8, viewHeight()-20, 1);
 		drawString("Health:"+((int)p.getHealth()), viewWidth()-10, viewHeight()-8, 1);
+		
+		if (levelFinished) {
+			int centerY = viewHeight()/2;
+			int centerX = viewWidth()/2;
+			
+			drawString("Congratulations! Level over!", centerX, centerY-4, 0, "yellow");
+			drawString("Press R To reset the game!", centerX, centerY+4, 0, "blue");
+			drawString("Try another ship!", centerX, centerY+12, 0, "blue");
+
+		} else if (p.isDead()) {
+			int centerY = viewHeight()/2;
+			int centerX = viewWidth()/2;
+			
+			drawString("Press R to reset the game!", centerX-4, centerY-4, 0, "yellow");
+			drawString("Try another ship!", centerX+4, centerY+4, 0, "blue");
+		}
 	}
 	
 	public PlayerShip getPlayer(){
